@@ -22,7 +22,7 @@ public class AppCardDeliveryTest {
     public void shouldAppCard() {
         open("http://localhost:9999");
         $("[data-test-id= city] input").setValue("Ря");
-        $$("menu-item__control").find(text("Рязань")).click();
+        $$("menu-item").find(text("Рязань")).click();
         String currentDate = generateDate(4,"dd.MM.yyyy");
         $("[data-test-id= date] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         $("[data-test-id= date] input").sendKeys(currentDate);
