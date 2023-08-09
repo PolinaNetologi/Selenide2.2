@@ -14,6 +14,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static  com.codeborne.selenide.Selenide.$;
 
 public class AppCardDeliveryTest {
+
     private String generateDate (int addDays, String pattern) {
         return LocalDate.now().plusDays(addDays).format(DateTimeFormatter.ofPattern(pattern));
     }
@@ -21,7 +22,7 @@ public class AppCardDeliveryTest {
 
     @Test
     public void shouldAppCard() {
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id= city] input").setValue("Ря");
         $$("menu-item").findBy(text("Рязань")).click();
         String currentDate = generateDate(4,"dd.MM.yyyy");
