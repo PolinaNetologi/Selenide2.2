@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/qvx5qah1o5setwg5?svg=true)](https://ci.appveyor.com/project/PolinaNetologi/selenide2-2-c8yut)
