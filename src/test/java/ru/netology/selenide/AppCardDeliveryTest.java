@@ -9,7 +9,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import com.codeborne.selenide.Condition.*;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -18,7 +18,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class AppCardDeliveryTest {
 
-    private String generateDate (int addDays, String pattern) {
+    private String generateDate(int addDays, String pattern) {
         return LocalDate.now().plusDays(addDays).format(DateTimeFormatter.ofPattern(pattern));
     }
 
@@ -35,7 +35,7 @@ public class AppCardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79506516950");
         $("[data-test-id='agreement']").click();
         $("button.button").click();
-        $(".notification__content")
+        $("notification__content")
                 .shouldBe(Condition.visible, Duration.ofSeconds(15))
                 .shouldHave(Condition.exactText("Встреча успешно забронирована на " + currentDate));
 
