@@ -37,7 +37,7 @@ public class AppCardDeliveryTest {
         $("button.button").click();
         $(".notification__content")
                 .shouldBe(Condition.visible, Duration.ofSeconds(15))
-                .shouldHave(Condition.text("Встреча успешно забронирована на " + currentDate));
+                .shouldHave(Condition.exactText("Встреча успешно забронирована на " + currentDate));
 
     }
 
